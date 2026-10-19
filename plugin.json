@@ -1,0 +1,20 @@
+
+{
+    "id": "trayLauncher",
+    "name": "Tray Launcher",
+    "description": "Search and activate system tray applications",
+    "version": "0.1.0",
+    "author": "Eon",
+    "icon": "apps",
+    "type": "launcher",
+    "capabilities": ["launcher"],
+    "component": "./TrayLauncherLauncher.qml",
+    "settings": "./TrayLauncherSettings.qml",
+    "trigger": "#",
+    "requires_dms": ">0.1.18",
+    "permissions": [
+        "settings_read",
+        "settings_write"
+    ]
+}
+
