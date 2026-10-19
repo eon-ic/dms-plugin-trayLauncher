@@ -271,12 +271,9 @@ function resolveTrayItem(trayItem, mappings) {
         }
 
         // 重新查找最新的托盘对象
-        const trayItem = getTrayItems().find(
-            candidate =>
-                candidate &&
-                String(candidate.id || "") === id
+        const trayItem = SystemTray.items.values.find(
+            candidate => normalize(candidate.id) === id
         )
-
         if (!trayItem) {
             console.warn(
                 "[TrayLauncher] Tray item no longer exists:",
